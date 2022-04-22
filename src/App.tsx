@@ -1,24 +1,30 @@
 import { ButtonAppBar } from "./components/appbar";
-import { BasicTable } from "./components/table";
+import { EnhancedTable } from "./components/table";
 import { BasicCard } from "./components/card";
 
 import styled from "styled-components";
 
 export const App = () => {
   return (
-    <Grid>
-      <AppBarStyle>
-        <ButtonAppBar />
-      </AppBarStyle>
-      <TableStyle>
-        <BasicTable />
-      </TableStyle>
-      <CardStyle>
-        <BasicCard />
-      </CardStyle>
-    </Grid>
+    <Root>
+      <Grid>
+        <AppBarStyle>
+          <ButtonAppBar />
+        </AppBarStyle>
+        <TableStyle>
+          <EnhancedTable />
+        </TableStyle>
+        <CardStyle>
+          <BasicCard />
+        </CardStyle>
+      </Grid>
+    </Root>
   );
 };
+
+const Root = styled.div`
+  height: 100%;
+`;
 
 const Grid = styled.div`
   display: grid;
